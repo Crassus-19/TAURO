@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Administración Tauro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 2em;
+        }
+        form {
+            background: white;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: left;
+        }
+        input[type="password"], input[type="submit"] {
+            display: block;
+            margin: 1em 0;
+            width: 100%;
+            padding: 0.5em;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Acceso a Administración Tauro</h1>
+    <form action="/login" method="POST">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Entrar">
+    </form>
+</body>
+</html>
