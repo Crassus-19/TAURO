@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Unidades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Administración Tauro</h1>
+        <nav>
+            <div class="menu">
+                <button id="menu-button">Menú</button>
+                <div class="dropdown" id="menu-dropdown">
+                    <a href="index.html">Inicio</a>
+                    <a href="unidades.html">Unidades</a>
+                    <a href="#" onclick="showSection('registros')">Registros</a>
+                    <a href="#" onclick="showSection('ordenes')">Órdenes de Trabajo</a>
+                    <a href="#" onclick="showSection('terminados')">Registros Terminados</a>
+                    <a href="#" onclick="showSection('choferes')">Choferes</a>
+                    <a href="#" onclick="showSection('diesel')">Diesel</a>
+                    <a href="#" onclick="showSection('admin')">ADMIN</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="add-unit">
+            <h2>Agregar Unidad</h2>
+            <form id="unit-form">
+                <label for="unit-name">Nombre de la Unidad:</label>
+                <input type="text" id="unit-name" name="unitName" required>
+
+                <label for="economic-number">Número Económico:</label>
+                <input type="text" id="economic-number" name="economicNumber" required>
+
+                <label for="unit-type">Tipo de Unidad:</label>
+                <select id="unit-type" name="unitType" required>
+                    <option value="tractocamion">Tractocamión</option>
+                    <option value="maquinaria_Construccion">Maquinaria de Construcción</option>
+                    <option value="camion_Reparto">Camión de Reparto</option>
+                    <option value="automovil">Automóvil</option>
+                    <option value="montacargas">Montacargas</option>
+                    <option value="maquinaria_agricola">Maquinaria Agrícola</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="brand">Marca:</label>
+                <input type="text" id="brand" name="brand" required>
+
+                <label for="model">Modelo:</label>
+                <input type="text" id="model" name="model" required>
+
+                <label for="plates">Placas:</label>
+                <input type="text" id="plates" name="plates" required>
+
+                <label for="year">Año:</label>
+                <input type="number" id="year" name="year" min="1900" max="2030" required>
+
+                <label for="serial-number">Número de Serie:</label>
+                <input type="text" id="serial-number" name="serialNumber" required>
+
+                <label for="engine-number">Número de Motor:</label>
+                <input type="text" id="engine-number" name="engineNumber" required>
+
+                <label for="fuel-type">Tipo de Combustible:</label>
+                <select id="fuel-type" name="fuelType" required>
+                    <option value="gasolina">Gasolina</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="electrico">Eléctrico</option>
+                    <option value="hibrido">Híbrido</option>
+                    <option value="gas_LP">Gas LP</option>
+                </select>
+
+                <label for="usage-type">Tipo de Uso:</label>
+                <select id="usage-type" name="usageType" required>
+                    <option value="kilometros">Kilómetros</option>
+                    <option value="horas">Horas</option>
+                </select>
+
+                <label for="mileage">Cantidad (Horas o Kilómetros):</label>
+                <input type="text" id="mileage" name="mileage" required>
+
+                <label for="status">Estado:</label>
+                <select id="status" name="status" required>
+                    <option value="activo">Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                    <option value="en_mantenimiento">En Mantenimiento</option>
+                </select>
+
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description" rows="3" required></textarea>
+
+                <label for="assignment">Asignación:</label>
+                <select id="assignment" name="assignment" required>
+                    <option value="fletes_tauro">Fletes Tauro</option>
+                    <option value="tauro_logistica">Tauro Logística</option>
+                    <option value="rancho_san_antonio">Rancho San Antonio</option>
+                </select>
+
+                <button type="submit">Agregar Unidad</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menuDropdown = document.getElementById('menu-dropdown');
+
+        menuButton.addEventListener('click', () => {
+            menuDropdown.style.display = menuDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+</html>
